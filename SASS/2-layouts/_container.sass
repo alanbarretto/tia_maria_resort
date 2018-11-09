@@ -30,8 +30,13 @@ body
 .grid
 	@include bigger-than-tiny
 		display: grid
-		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr
 
+.content-wrap, #section-b ul
+	grid-column: 2/4
 
-
-
+.free_container
+	@include bigger-than-tiny
+		background: red
+		height: 500px
+	width: 100%
