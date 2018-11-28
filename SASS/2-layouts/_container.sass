@@ -27,19 +27,20 @@ body
 		height: 450px
 		z-index: -1
 
-.grid
+.grid-1, .grid-3, .grid-4
 	@include bigger-than-tiny
 		display: grid
 		grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr
 
 .content-wrap, #section-b ul
 	grid-column: 2/4
+	list-style: none
 
-.free_container
+.grid-2
 	@include bigger-than-tiny
-		background: red
-		height: 500px
-	width: 100%
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 1fr
+
 
 #main-footer
 	grid-template-rows: 1fr 1fr 1fr
